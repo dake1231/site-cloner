@@ -118,11 +118,11 @@ class Crawler(Thread):
         links = re.findall('https?://(?:[-\w.]|(?:%[\da-fA-F]{2}))+', text)
         for l in links:
             href = str(l)
-            print(href)
+            
             if not any((href.endswith(ext) for ext in self.alowed_img_exts)):
                 continue
 
-            print(href)
+            
             if href is not None and href not in self.visited_links:
                 if "//" in href:
                     path_s = href.split("/")

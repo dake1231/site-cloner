@@ -14,16 +14,16 @@ if __name__ == "__main__":
                 project_name = row["project_name"]
                 user_id = str(row["user_id"])
                 project_id = str(row["id"])
-                print('b s')
+                
                 crawl = crawler.Crawler(
                     url=project_url,
                     project_name=project_name,
                     user_id=user_id,
                     project_id=project_id)
-                print('s')
+                
 
                 crawl.start()
-                print('a s')
+                
 
             except Exception as e:
                 print(e)
